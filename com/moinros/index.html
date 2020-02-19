@@ -2,8 +2,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>图片裁剪</title>
-    <script src="NodeCropping.js"></script>
+    <title>JavaScript插件包</title>
+    <script src="script/DomElement.js"></script>
+    <script src="script/RosCropping.js"></script>
 </head>
 <body>
 <div id="CroppingBox"></div>
@@ -16,9 +17,10 @@
     // rc.setScaling(true);
 
     let div = $C("#CroppingBox");
-    let html = $C("<div>").insertTarget(div).addClass("ros-crop-box-wrap").append($C("<input class='crop-box'>")).val("123456");
+    let html = $C("<div>").insertTarget(div).addClass("ros-crop-box-wrap").append($C("<input class='crop-box'>")).val("123456").width();
     console.dir(html);
     console.log(html.getElement());
+    //XMPictureCut
 </script>
 </body>
 </html>

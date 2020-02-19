@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c447386a-3c70-45c7-9d30-4d4a81677dfb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/com.moinros.node/RosCropping/RosCropping.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.moinros.node/RosCropping/RosCropping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.moinros.node/RosCropping/RosCropping.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.moinros.node/RosCropping/RosCropping.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1XvbIoj5NdWQAQmmjLWfSeun9md" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="$APPLICATION_CONFIG_DIR$/node/node-v12.13.1-win-x64/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="ts.external.directory.path" value="D:\Java\ideaIU-2019.3.1.win\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\JavaCode\IdeaCode\moinros-node-cropper\com\moinros\node" />
+      <recent name="D:\Code\JavaCode\IdeaCode\moinros-node-cropper\com\moinros" />
+      <recent name="D:\Code\JavaCode\IdeaCode\moinros-node-cropper\com.moinros.node" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\JavaCode\IdeaCode\moinros-node-cropper" />
+      <recent name="D:\Code\JavaCode\IdeaCode\moinros-node-cropper\com.moinros.node\RosCropping" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c447386a-3c70-45c7-9d30-4d4a81677dfb" name="Default Changelist" comment="" />
+      <created>1581929437703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581929437703</updated>
+      <workItem from="1581929439913" duration="30349000" />
+      <workItem from="1582007107312" duration="38006000" />
+      <workItem from="1582107480354" duration="23246000" />
+    </task>
+    <task id="LOCAL-00001" summary="项目创建">
+      <created>1581929821960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581929821960</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第[ 2 ]次提交项目 - 图片裁剪功能完成">
+      <created>1582050663833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582050663833</updated>
+    </task>
+    <task id="LOCAL-00003" summary="第[ 3 ]次提交项目 - 重写了{DomElement}插件">
+      <created>1582136739211</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582136739211</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目创建" />
+    <MESSAGE value="第[ 2 ]次提交项目 - 图片裁剪功能完成" />
+    <MESSAGE value="第[ 3 ]次提交项目 - 重写了{DomElement}插件" />
+    <option name="LAST_COMMIT_MESSAGE" value="第[ 3 ]次提交项目 - 重写了{DomElement}插件" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="756" y="228" key="CommitChangelistDialog2" timestamp="1582139663066">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="756" y="228" key="CommitChangelistDialog2/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582139663066" />
+    <state x="852" y="330" key="NewModule_or_Project.wizard" timestamp="1581929766856">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="852" y="330" key="NewModule_or_Project.wizard/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1581929766856" />
+    <state x="665" y="258" key="SettingsEditor" timestamp="1582139499035">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="665" y="258" key="SettingsEditor/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582139499035" />
+    <state x="772" y="368" key="Vcs.Push.Dialog.v2" timestamp="1582139673855">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="772" y="368" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582139673855" />
+    <state x="852" y="327" key="run.anything.popup" timestamp="1582049254133">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="852" y="327" key="run.anything.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582049254133" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1581961597717">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1581961597717" />
+  </component>
+</project>
