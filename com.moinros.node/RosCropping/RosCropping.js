@@ -1,10 +1,11 @@
+/*
 (function() {
 
-    /**
+    /!**
      * 判断参数是否为DOM元素
      * @param obj
      * @returns {boolean}
-     */
+     *!/
     function isDom(obj) {
         if (typeof HTMLElement === 'object') {
             return obj instanceof HTMLElement;
@@ -18,24 +19,12 @@
         if (ele) ele.parentNode.removeChild(ele);
     }
 
-    /**
-     * 判断元素是否为目标元素的子元素;是返回true,不是则返回false
-     * @param ele 元素
-     * @param target 目标元素
-     * @returns {boolean}
-     */
-    function isTargetSon(ele, target) {
-        //ele是内部元素，target是你想找到的包裹元素
-        if (!ele || ele === document) return false;
-        return ele === target ? true : isTargetSon(ele.parentNode, target);
-    }
-
-    /**
+    /!**
      * 将原生DOM对象封装为`DomElement`对象,用于绑定一些常用方法
      * @param selector
      * @returns {DomElement}
      * @constructor
-     */
+     *!/
     function DomElement(selector) {
         if (!selector) {
             return undefined;
@@ -93,7 +82,6 @@
                 } else {
                     this.selector.className = className;
                 }
-
             }
             return this;
         },
@@ -132,7 +120,6 @@
             this.css("left", val + 'px');
             return this;
         },
-
 
         // 设置CSS样式,(只传key获取CSS样式)
         css: function(key, val) {
@@ -321,14 +308,15 @@
     // 配置默认样式
     const Config = {
         VIEW: {
-            list: [
-                // "ICO_VIEW_1",
-                // "ICO_VIEW_2",
-                // "ICO_VIEW_3",
-                // "ICO_VIEW_4",
-            ],
+            // 缩略图元素ID
+            list: [],
             // 是否等比例放大裁剪框
             scaling: true,
+        },
+        BUTTON: {
+            fileInput: undefined,
+            submit: undefined,
+            cropButton: undefined,
         },
         CSS: {
             ros_cropping: [
@@ -426,12 +414,12 @@
 
     let flag = true;
 
-    /**
+    /!**
      * 为元素绑定鼠标点击事件
      * @param ele [DomElement]对象
      * @param crop [$Cropping]对象
      * @param fn 鼠标拖动时执行的函数
-     */
+     *!/
     function setEvent(ele, crop, fn) {
         ele.selector.onmousedown = function(ev) {
             if (flag) {
@@ -528,20 +516,20 @@
         });
 
         $D(DOM_DATA.getImage).on("click", function(e) {
-            $Cropping.prototype.getImage(e, _OBJECT_);
+            $Cropping.prototype._getImage(_OBJECT_, e);
         });
-
         $Cropping.prototype.initEvent(this, DOM_DATA);
+
     }
 
     // 修改原型
     $Cropping.prototype = {
 
-        /**
+        /!**
          * 显示预览缩略图
          * @param conf DOM列表
          * @param cs 计算完成后的裁剪区坐标尺寸
-         */
+         *!/
         showViewList: function(conf, cs) {
             let list = Config.VIEW.list;
             let item = conf.VIEW_ICO.boxList;
@@ -555,11 +543,11 @@
             }
         },
 
-        /**
-         * 初始化小预览图列表
+        /!**
+         * 初始化缩略图预览图列表
          * @param conf DOM列表
          * @param cs 计算完成后的裁剪区坐标尺寸
-         */
+         *!/
         initViewList: function(conf, cs, fr) {
             let list = Config.VIEW.list;
             if (list) {
@@ -588,12 +576,12 @@
             }
         },
 
-        /**
+        /!**
          * 获取裁剪出来的图片
          * @param e
          * @param crop
-         */
-        getImage: function(e, crop) {
+         *!/
+        _getImage: function(crop) {
             let tables = crop._dom_data_;
             let values = crop._box_value_;
             // 本地图片原始长度
@@ -858,36 +846,35 @@
         },
     };
 
+    const regex = /^#(.)+/;
 
     function RosCroppingUtil(selector) {
-        this.CROPPING = new $Cropping(selector);
+        if (regex.test(selector)) {
+            this.CROPPING = new $Cropping(selector.substring(1, selector.length));
+        } else if (isDom(selector)) {
+            this.CROPPING = new $Cropping(selector);
+        } else {
+            throw "初始化失败！";
+        }
         return {
-            addViewList: RosCroppingUtil.prototype._addViewList,
-            getSizeData: RosCroppingUtil.prototype._getSizeData,
+            // 添加缩略图模块ID
+            addViewList: function(id) {
+                Config.VIEW.list.push(id);
+                return this;
+            },
+            // 设置裁剪框长宽是否等比例缩放
+            setScaling: function(flag) {
+                Config.VIEW.scaling = flag;
+            },
             getImage: RosCroppingUtil.prototype._getImage,
-            getImageElement: RosCroppingUtil.prototype._getImageElement,
-            initFileInput: RosCroppingUtil.prototype._initFileInput,
         };
     }
 
     // 修改原型
     RosCroppingUtil.prototype = {
-        _addViewList: function(id) {
-            Config.VIEW.list.push(id);
-            return this;
-        },
-        _getSizeData: function() {
-
-        },
         _getImage: function() {
-          //  this.CROPPING.getImage();
+            this.CROPPING._getImage(this.CROPPING);
         },
-        _getImageElement: function() {
-
-        },
-        _initFileInput: function(input) {
-
-        }
     };
     window.RosCropping = RosCroppingUtil;
-})();
+})();*/
