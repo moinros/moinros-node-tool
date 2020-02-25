@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="test/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <div>{{ context }}</div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            context: "哈哈",
+        }
+    });
+</script>
+</body>
+</html>

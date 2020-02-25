@@ -1,0 +1,507 @@
+.dialog-wrap {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background-color: rgba(153, 153, 153, 0.5);
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.dialog-box {
+    position: fixed;
+    top: calc(50% - 100px);
+    left: calc(50% - 111px);
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 5px 1px #c4e1fa;
+    color: #333333;
+    z-index: 9999;
+    user-select: none;
+}
+
+.dialog-box .dialog-close {
+    height: 32px;
+    line-height: 32px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dedede;
+}
+
+.dialog-box .title {
+    font-size: 18px;
+    color: #333333;
+    height: 20px;
+    padding: 0px 10px 0px 20px;
+}
+
+.dialog-box .box-link {
+    color: #666666;
+}
+
+.dialog-box .box-link:hover {
+    color: #00c3ff;
+}
+
+.dialog-box .close {
+    position: relative;
+    float: right;
+    top: 6px;
+    right: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid #bebebe;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 2px 1px #dedede inset;
+}
+
+.dialog-box .close:hover {
+    border: 1px solid #aaaaaa;
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 2px 1px #dedede inset;
+}
+
+.dialog-box .close:active {
+    border: 1px solid #bfbfbf;
+    background-color: #efefef;
+    box-shadow: 0px 0px 2px 1px #dedede inset;
+}
+
+.dialog-box .close i::before {
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #bebebe;
+    transform: rotate(-45deg);
+    border-radius: 1px;
+}
+
+.dialog-box .close i::after {
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #bebebe;
+    transform: rotate(45deg);
+    border-radius: 1px;
+}
+
+.dialog-box .close:hover i::before {
+    background: #888888;
+}
+
+.dialog-box .close:hover i::after {
+    background: #888888;
+}
+
+.dialog-box .close:active i::before {
+    background: #f5881a;
+}
+
+.dialog-box .close:active i::after {
+    background: #f5881a;
+}
+
+.dialog-box .dialog-content {
+    padding: 10px;
+}
+
+.dialog-box .dialog-button {
+    padding: 5px 10px 10px 10px;
+}
+
+.dialog-box {
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+
+.message-box {
+    width: 180px;
+    top: calc(50% - 100px);
+    left: calc(50% - 90px);
+}
+
+.message-box .dialog-content {
+    min-height: 40px;
+}
+
+.message-text {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 50px;
+    bottom: 20px;
+    width: 256px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation-name: message-text;
+    animation-duration: 360ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes message-text {
+    from {
+        height: 36px;
+    }
+    to {
+        height: 175px;
+    }
+}
+
+.dialog-box .dialog-button .button-box {
+    position: relative;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+
+.dialog-box .dialog-button .button {
+    width: 50px;
+    height: 24px;
+    font-size: 14px;
+    color: #456;
+    user-select: none;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    border: 1px solid #abb1b3;
+    background-color: #ffffff;
+    box-shadow: 0px -10px 10px 1px #ebebeb inset
+}
+
+.dialog-box .dialog-button .button:hover {
+    color: #333;
+    border: 1px solid #9da2a4;
+}
+
+.dialog-box .dialog-button .button:active {
+    border: 1px solid #a3a9ab;
+    box-shadow: 0px 15px 10px 1px #e8e8e8 inset
+}
+
+.dialog-box .dialog-button .confirm {
+    float: left;
+}
+
+.dialog-box .dialog-button .cancel {
+    float: right;
+}
+
+.login-box {
+    width: 400px;
+}
+
+.login-form ul {
+    display: block;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+
+}
+
+.login-form li {
+    width: 254px;
+    margin: auto;
+    list-style: none;
+}
+
+.login-form .item {
+    height: 60px;
+}
+
+.login-form input[box='text'] {
+    padding: 0px 10px 0px 10px;
+    width: 232px;
+    height: 26px;
+    font-family: small, Consolas;
+    letter-spacing: 1px;
+    border: 1px solid #ccc;
+}
+
+.login-form input[box='text']:focus {
+    border: 1px solid #00c3ff;
+    box-shadow: 0px 0px 4px 0px #2a9bff;
+}
+
+.login-form .select-box {
+    height: 30px;
+    line-height: 30px;
+}
+
+.login-form .select-box label {
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px 5px 0px 5px;
+}
+
+.login-form .select-box label:hover {
+    color: #333;
+    box-shadow: 0px 0px 2px 0px #00c3ff;
+}
+
+.login-form .select-box .select-box-auto {
+    float: left;
+}
+
+.login-form .select-box .select-box-login {
+    float: right;
+}
+
+.login-form .select-box input[type='checkbox'] {
+    vertical-align: middle;
+    /*-webkit-appearance:none;*/
+}
+
+.login-form .tips {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+}
+
+.login-form .tips-success {
+    color: #0bed16;
+}
+
+.login-form .tips-error {
+    color: #ef1408;
+}
+
+.login-form .tips::after {
+    content: attr(tips);
+    line-height: 28px;
+    padding: 0px 10px 0px 10px;
+}
+
+.login-form .login-button {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #00c3ff;
+    background-color: #0fbcf1;
+    box-shadow: 0px 0px 4px 1px #7fe1ff inset;
+    color: #ffffff;
+    text-align: center;
+    user-select: none;
+}
+
+.login-form .login-button:hover {
+    background-color: #00c3ff;
+}
+
+.slide-box {
+    top: calc(50% - 100px);
+    left: calc(50% - 160px);
+    border: 1px solid #acacac;
+}
+
+.slide-bar {
+    position: relative;
+    width: 255px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid #c3cfd2;
+    margin: 20px;
+    border-radius: 5px;
+    user-select: none;
+    box-shadow: 0px 0px 5px 1px #b4c6cc inset;
+    z-index: 997;
+    background-color: #ffffff;
+}
+
+.slide-bar .text {
+    position: absolute;
+    color: #888888;
+    width: 255px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    z-index: 997;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 1px #b4c6cc inset;
+}
+
+.slide-bar .tips {
+    display: none;
+}
+
+.slide-bar .tips::after {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 255px;
+    height: 30px;
+    color: #0bed16;
+    line-height: 30px;
+    content: '验证成功！';
+    animation-name: slide-tips;
+    animation-duration: 255ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-tips {
+    from {
+        top: 0px;
+    }
+    to {
+        top: -30px;
+    }
+}
+
+@keyframes slider-tips {
+    from {
+        left: 40px;
+    }
+    to {
+        left: 185px;
+    }
+}
+
+
+.slide-bar .slider {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: grab;
+    z-index: 998;
+}
+
+.slide-bar .slider::after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: url("/wp-content/ico/slider_right.ico");
+}
+
+@keyframes slider-tips {
+    from {
+        left: 40px;
+    }
+    to {
+        left: 185px;
+    }
+}
+
+.dialog-wrap .dialog-wait {
+    position: fixed;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    min-width: 200px;
+    min-height: 80px;
+    text-align: center;
+}
+
+.dialog-wrap .dialog-wait .wait-text {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.dialog-wrap .dialog-wait .wait-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px dotted #ffffff;
+    border-radius: 15px;
+    user-select: none;
+    animation-name: dialog-wait;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dialog-wait {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.upload-box {
+    width: 798px;
+    top: 20%;
+    left: calc(50% - 400px);
+}
+
+.upload-box .xm-pc-model-box {
+    float: left;
+    width: 600px;
+}
+
+.upload-box .xm-up-img-small {
+    float: right;
+    width: 178px;
+}
+
+.xm-up-img-view-1 {
+    width: 175px;
+    height: 175px;
+    margin: 0px auto 10px auto;
+}
+
+.xm-up-img-view-2 {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto 10px auto;
+}
+
+.xm-up-img-view-3 {
+    width: 50px;
+    height: 50px;
+    margin: 0px auto 10px auto;
+}
+
+.xm-up-img-v-list input[type='text'] {
+    width: 100px;
+}
+
+.xm-up-img-v-list label {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+

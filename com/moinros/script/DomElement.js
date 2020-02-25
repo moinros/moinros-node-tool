@@ -1,6 +1,15 @@
 ;(function() {
     "use strict";// 严格模式
 
+    // 是否为DOM节点
+    function isDom(obj) {
+        if (typeof HTMLElement === 'object') {
+            return obj instanceof HTMLElement;
+        } else {
+            return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
+        }
+    }
+
     // 根据 html 代码片段创建 dom 对象
     function createElemByHTML(html) {
         let div = void 0;
@@ -18,15 +27,6 @@
             return true;
         }
         return false;
-    }
-
-    // 是否为DOM节点
-    function isDom(obj) {
-        if (typeof HTMLElement === 'object') {
-            return obj instanceof HTMLElement;
-        } else {
-            return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
-        }
     }
 
     // 封装 document.querySelectorAll

@@ -4,23 +4,61 @@
     <meta charset="UTF-8">
     <title>JavaScript插件包</title>
     <script src="script/DomElement.js"></script>
-    <script src="script/RosCropping.js"></script>
+    <script src="script/XMPictureCut.js"></script>
+    <style>
+        .CroppingBox:hover {
+            border: 1px solid #478eff;
+            cursor: ew-resize;
+
+        }
+    </style>
 </head>
 <body>
 <div id="CroppingBox"></div>
-<!--<div id="ICO_VIEW_4" style="width: 128px;height: 128px;"></div>-->
+<div>
+    <input id="inputBox" type="file" name="file"/>
+    <button id="input_restore" type="button">重置样式</button>
+    <button type="button" onclick="getImg()">获取图片</button>
+    <button type="button" onclick="setView()">设置图片</button>
+    <div id="show_image"></div>
+</div>
+<div>
+    <div class="view_box" style="width: 200px; height: 175px;"></div>
+    <div class="view_box" style="width: 100px; height: 100px;"></div>
+    <div class="view_box" style="width: 50px; height: 50px;"></div>
+</div>
 <script>
     // 初始化
-    // var box = document.getElementById("CroppingBox");
-    // var rc = CroppingUtil(box);
-    // rc.addViewList("ICO_VIEW_1").addViewList("ICO_VIEW_2").addViewList("ICO_VIEW_3").addViewList("ICO_VIEW_4");
-    // rc.setScaling(true);
+    let picture = new XMPictureCut("#CroppingBox");
+    picture.create({
+        freeScaling: true,
+        aspectRatio: 1 / 1,
+        plugin: {
+            fileInput: "#inputBox",
+            restore: "#input_restore",
+            preview: [".view_box"],
+        },
+        cropView: function(view) {
+            //  console.log(view);
+            console.log(picture.getViewSize());
+        },
+    });
 
-    let div = $C("#CroppingBox");
-    let html = $C("<div>").insertTarget(div).addClass("ros-crop-box-wrap").append($C("<input class='crop-box'>")).val("123456").width();
-    console.dir(html);
-    console.log(html.getElement());
-    //XMPictureCut
+    picture.setScaling(false);
+
+
+    function setView() {
+        picture.setView(100, 'asd', 200, 200);
+    }
+
+    function getImg() {
+        let result = picture.getImage();
+        let img = new Image();
+        img.src = result.data;
+        document.getElementById("show_image").appendChild(img);
+    }
+
+
 </script>
 </body>
 </html>
