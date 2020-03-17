@@ -5,7 +5,6 @@
     } catch (ex) {
         throw new Error('请在浏览器环境下运行');
     }
-    factory();
     window.XMPictureCut = factory();
 })(this, function() {
     "use strict";// 严格模式
